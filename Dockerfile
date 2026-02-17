@@ -1,7 +1,7 @@
-FROM alpine:3.19
+FROM postgres:18-alpine
 
-# Instalar pg_dump (postgresql-client) y awscli
-RUN apk add --no-cache postgresql-client aws-cli bash ca-certificates curl
+# Esta imagen ya trae pg_dump 18.x instalado
+RUN apk add --no-cache aws-cli bash ca-certificates curl
 
 WORKDIR /app
 
